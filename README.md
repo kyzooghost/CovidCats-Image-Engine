@@ -1,5 +1,9 @@
 # CovidCats-Image-Engine
 
+
+<img src="https://raw.githubusercontent.com/kyzooghost/CovidCats-Image-Engine/main/images/homecat.png" width="512" height="512" />
+
+
 Layer Order:
 - Face
 - Ears
@@ -16,6 +20,3 @@ The above line will input "face3.png + ear4.png + mouth3.png + eye4.png + whiske
 Then run `npx ts-node index`
 
 This will create 0.png in the root directory with the desired traits
-
-
-<img src="https://raw.githubusercontent.com/kyzooghost/CovidCats-Image-Engine/main/images/homecat.png" width="512" height="512" />
