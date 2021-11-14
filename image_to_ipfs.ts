@@ -3,8 +3,7 @@
 
 require("dotenv").config();
 import * as fs from "fs"
-import * as axios from "axios"
-const { loadImage } = require('canvas')
+import axios from "axios"
 
 const MoralisIPFSUploadEndpoint = "https://deep-index.moralis.io/api/v2/ipfs/uploadFolder"
 
@@ -117,13 +116,5 @@ function getElements (path: string) {
                 filename: i,
                 path: `${path}${i}`
         }
-    })
-}
-
-// Load image file for a given path
-async function loadLayerImg (path: string) {
-    return new Promise(async (resolve) => {
-        const image = await loadImage(path);
-        resolve({ loadedImage: image });
     })
 }
