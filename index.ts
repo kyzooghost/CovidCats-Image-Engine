@@ -1,4 +1,5 @@
-// const fs = require("fs");
+// Script to input desired traits, and generate final NFT image
+
 import * as fs from "fs"
 const { createCanvas, loadImage } = require('canvas')
 
