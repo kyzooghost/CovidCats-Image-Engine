@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/kyzooghost/CovidCats-Image-Engine#readme",
   "dependencies": {
+    "axios": "^0.24.0",
     "canvas": "^2.8.0",
+    "dotenv": "^10.0.0",
     "gif-encoder-2": "^1.0.5",
     "sha1": "^1.1.1"
   },

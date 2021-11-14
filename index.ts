@@ -1,7 +1,5 @@
-
-
-const fs = require("fs");
-const sha1 = require("sha1");
+// const fs = require("fs");
+import * as fs from "fs"
 const { createCanvas, loadImage } = require('canvas')
 
 interface RenderObject {
@@ -9,14 +7,23 @@ interface RenderObject {
         name: string;
         blend: string;
         opacity: number;
-        selectedElement: {
-            id: number;
-            name: string;
-            filename: string;
-            path: string;
-        }
+        selectedElement: ImageElement
     }
     loadedImage: object;
+}
+
+interface ImageElement {
+    id: number;
+    name: string;
+    filename: string;
+    path: string;
+}
+
+interface Layer {
+    id: number;
+    elements: ImageElement[];
+    name: string;
+    blend: string;
 }
 
 const basePath = process.cwd();
@@ -111,7 +118,7 @@ function elementsSetup (face: number, ear: number, mouth: number, eye: number, w
 // Expand layersOrder array to prepare for image engine
 function layersSetup (layersOrder: {name: string}[]) {
     
-    const layers: {id: number, elements: {id: number, name: string, filename: string, path: string}[], name: string, blend: string}[] = layersOrder.map((layerObj, index) => ({
+    const layers: Layer[] = layersOrder.map((layerObj, index) => ({
         id: index,
         elements: getElements(`${layersDir}/${layerObj.name}/`),
         name: layerObj.name,
