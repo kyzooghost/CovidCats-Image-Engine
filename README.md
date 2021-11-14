@@ -1,3 +1,5 @@
+![](https://raw.githubusercontent.com/kyzooghost/CovidCats-Image-Engine/main/images/homecat.png)
+
 # CovidCats-Image-Engine
 
 Layer Order:
@@ -8,7 +10,7 @@ Layer Order:
 - Whiskers
 - Mask
 
-Input desired layer into Line 42 of index.ts: `const results = elementsSetup(3, 4, 3, 4, 5, 3);`
+Input desired layer into Line 44 of index.ts: `const results = elementsSetup(3, 4, 3, 4, 5, 3);`
 
 The above line will input "face3.png + ear4.png + mouth3.png + eye4.png + whisker5.png + mask3.png"
 

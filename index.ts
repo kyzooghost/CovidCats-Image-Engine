@@ -36,6 +36,8 @@ const layersOrder: {name: string}[] = [
     { name: "Mask" }
 ];
 
+createImages();
+
 // Unsure how to handle "UnhandledPromiseRejection" when giving input to elementsSetup() that doesn't exist
 async function createImages() {
     // Input desired traits here
@@ -64,8 +66,6 @@ async function createImages() {
             fs.writeFileSync(`${basePath}/0.png`, canvas.toBuffer("image/png"))
         })
 }
-
-createImages();
 
 function drawElement (_renderObject: RenderObject, _index: number) {
     ctx.globalAlpha = _renderObject.layer.opacity;
