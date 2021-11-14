@@ -13,10 +13,9 @@ Layer Order:
 - Whiskers
 - Mask
 
-Input desired layer into Line 44 of index.ts: `const results = elementsSetup(3, 4, 3, 4, 5, 3);`
+To generate an NFT .png file based on desired traits, go to line 49 of index.ts and alter the numbers in the following lines
 
-The above line will input "face3.png + ear4.png + mouth3.png + eye4.png + whisker5.png + mask3.png"
-
+`createImages(3, 4, 3, 4, 5, 3);` => "face3.png + ear4.png + mouth3.png + eye4.png + whisker5.png + mask3.png"
 
 Then run `npx ts-node index`
 
