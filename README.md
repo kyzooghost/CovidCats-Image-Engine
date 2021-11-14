@@ -18,4 +18,7 @@ Then run `npx ts-node index`
 This will create 0.png in the root directory with the desired traits
 
 
-![](https://raw.githubusercontent.com/kyzooghost/CovidCats-Image-Engine/main/images/homecat.png)
+![](https://raw.githubusercontent.com/kyzooghost/CovidCats-Image-Engine/main/images/homecat.png) {
+    width: 512px;
+    height: 512px;
+}
