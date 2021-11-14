@@ -3,7 +3,7 @@
 
 require("dotenv").config();
 import * as fs from "fs"
-import axios, * as axious from "axios"
+import * as axios from "axios"
 const { loadImage } = require('canvas')
 
 const MoralisIPFSUploadEndpoint = "https://deep-index.moralis.io/api/v2/ipfs/uploadFolder"
