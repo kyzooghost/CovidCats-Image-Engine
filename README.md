@@ -12,5 +12,7 @@ Input desired layer into Line 42 of index.ts: `const results = elementsSetup(3, 
 
 The above line will input "face3.png + ear4.png + mouth3.png + eye4.png + whisker5.png + mask3.png"
 
-Then run: `npx ts-node index`
+
+Then run `npx ts-node index`
+
 This will create 0.png in the root directory with the desired traits
