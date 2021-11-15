@@ -10,7 +10,7 @@ Moralis.start({ serverUrl, appId, masterKey });
 
 let file: any;
 
-export async function send_image_to_ipfs (_canvas: any) {
+export async function save_image_to_ipfs (_canvas: any) {
   const raw_image = _canvas.toBuffer("image/png")
   const raw_image_2 = "data:image/png;base64," + raw_image.toString("base64")
   file = new Moralis.File("image.png", {base64 : raw_image_2 });

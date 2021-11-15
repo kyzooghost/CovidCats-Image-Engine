@@ -2,7 +2,7 @@
 
 import * as fs from "fs"
 const { createCanvas, loadImage } = require('canvas')
-import { send_image_to_ipfs } from "./send_image_to_ipfs"
+import { save_image_to_ipfs } from "./save_image_to_ipfs"
 
 interface RenderObject {
     layer: {
@@ -77,7 +77,7 @@ async function createImages(face: number, ear: number, mouth: number, eye: numbe
             // fs.writeFileSync(`${basePath}/0.png`, canvas.toBuffer("image/png"))
         })
     
-    await send_image_to_ipfs(canvas)
+    await save_image_to_ipfs(canvas)
 }
 
 function drawElement (_renderObject: RenderObject, _index: number) {
