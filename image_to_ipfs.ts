@@ -1,5 +1,4 @@
 require("dotenv").config();
-// const Moralis = require('moralis/node');
 import Moralis from 'moralis/node'
 
 const fs = require("fs");
