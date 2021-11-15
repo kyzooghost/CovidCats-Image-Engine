@@ -31,6 +31,8 @@ export async function save_image_to_ipfs (_canvas: any) {
 //   console.log(file.ipfs())  
 // }
 
+// send_image_to_ipfs()
+
 //MODIFY IMAGE PATH HERE
 // const imagePath = './0.png'
 // let file: any;

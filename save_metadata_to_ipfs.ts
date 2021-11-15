@@ -12,7 +12,7 @@ export async function save_metadata_to_ipfs(_metadata: object) {
   const file = new Moralis.File("file.json", {base64 : altered_data});
   await file.saveIPFS({ useMasterKey: true });
   const read_file = JSON.parse(JSON.stringify(file))
-  console.log(read_file.ipfs, read_file.hash)
+  return read_file.ipfs
 }
 
 // Example input and call

@@ -47,10 +47,10 @@ const layersOrder: {name: string}[] = [
 
 // Input desired traits here
 // e.g. createImages(1, 1, 1, 1, 1, 1) => face1.png + ear1.png + mouth1.png + eye1.png + whisker1.png + mask1.png
-createImages(3, 4, 3, 4, 5, 3);
+// createImage(3, 4, 3, 4, 5, 3);
 
 // Unsure how to handle "UnhandledPromiseRejection" when giving input to elementsSetup() that doesn't exist
-async function createImages(face: number, ear: number, mouth: number, eye: number, whisker: number, mask: number) {
+export async function createImage(face: number, ear: number, mouth: number, eye: number, whisker: number, mask: number) {
     
     const results = elementsSetup(face, ear, mouth, eye, whisker, mask);
 
@@ -77,7 +77,8 @@ async function createImages(face: number, ear: number, mouth: number, eye: numbe
             // fs.writeFileSync(`${basePath}/0.png`, canvas.toBuffer("image/png"))
         })
     
-    await save_image_to_ipfs(canvas)
+    const ipfs_link = await save_image_to_ipfs(canvas)
+    return ipfs_link;
 }
 
 function drawElement (_renderObject: RenderObject, _index: number) {
